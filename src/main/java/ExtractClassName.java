@@ -20,7 +20,7 @@ public class ExtractClassName {
      * @param: methodNames 存储每个方法名
      * @param: argNames 存储方法的形参名
      * @param: varNames 存储方法内的局部变量名
-     * @param: methodAnnotations 存储方法的注释
+     * @param: methodComments 存储方法的注释
      */
     private static List<String> classNames = new ArrayList<>();
     private static List<String> memberNames = new ArrayList<>();
