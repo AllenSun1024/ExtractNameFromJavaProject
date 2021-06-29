@@ -6,7 +6,7 @@ import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 import java.util.List;
 
 /**
- * @class: VarNameCollector，抽取方法体内声明的所有变量名
+ * @class VarNameCollector，抽取方法体内声明的所有变量名
  */
 
 public class VarNameCollector extends VoidVisitorAdapter<List<String>> {

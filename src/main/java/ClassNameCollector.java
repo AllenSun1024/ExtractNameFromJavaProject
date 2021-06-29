@@ -4,7 +4,7 @@ import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 import java.util.List;
 
 /**
- * @class: ClassNameCollector，获取Java类名
+ * @class ClassNameCollector，获取Java类名
  */
 
 public class ClassNameCollector extends VoidVisitorAdapter<List<String>> {

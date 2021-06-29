@@ -6,7 +6,7 @@ import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 import java.util.List;
 
 /**
- * @class: CommentCollector，抽取注释
+ * @class CommentCollector，抽取注释
  */
 
 public class CommentCollector extends VoidVisitorAdapter<List<String>> {

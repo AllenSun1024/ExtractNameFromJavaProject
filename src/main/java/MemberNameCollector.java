@@ -5,7 +5,7 @@ import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 import java.util.List;
 
 /**
- * @class: MemberNameCollector，抽取类的成员变量名
+ * @class MemberNameCollector，抽取类的成员变量名
  */
 
 public class MemberNameCollector extends VoidVisitorAdapter<List<String>> {

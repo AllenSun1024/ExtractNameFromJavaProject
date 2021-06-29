@@ -2,25 +2,24 @@ import com.github.javaparser.StaticJavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.visitor.VoidVisitor;
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExtractClassName {
+public class ExtractNames {
 
     /**
-     * @param: rootPath 存储待解析Java文件的根目录
+     * @param rootPath 存储待解析Java文件的根目录
      */
-    private static final String rootPath = "/Users/abnerallen/IdeaProjects/ExtractNameFromJavaProject/ExtractNameFromJavaProject";
+    private static final String rootPath = "/home/ubuntu/zfy/spring";
 
     /**
-     * @param: classNames 存储Java文件的类名
-     * @param: memberNames 存储类的成员变量名
-     * @param: methodNames 存储每个方法名
-     * @param: argNames 存储方法的形参名
-     * @param: varNames 存储方法内的局部变量名
-     * @param: methodComments 存储方法的注释
+     * @param classNames 存储Java文件的类名
+     * @param memberNames 存储类的成员变量名
+     * @param methodNames 存储每个方法名
+     * @param argNames 存储方法的形参名
+     * @param varNames 存储方法内的局部变量名
+     * @param methodComments 存储方法的注释
      */
     private static List<String> classNames = new ArrayList<>();
     private static List<String> memberNames = new ArrayList<>();
@@ -32,8 +31,7 @@ public class ExtractClassName {
     public static void main(String[] args) throws FileNotFoundException {
         File f = new File(rootPath);
         parse_file(f);
-        for(String methodComment: methodComments)
-            System.out.println(methodComment);
+        write_txt();
     }
 
     private static void parse_file(File f) throws FileNotFoundException {
@@ -74,6 +72,47 @@ public class ExtractClassName {
                 System.out.println(file.getName() + " -> 不应处理的文件");
             }
         }
+    }
+
+    private static void write_txt(){
+
+        try{
+            FileWriter fileWriter = new FileWriter("names.txt");
+            PrintWriter printWriter = new PrintWriter(fileWriter);
+            // write class names
+            for(String s: classNames)
+                printWriter.print(s + '\n');
+            printWriter.print('\n');
+
+            // write member variable names
+            for(String s: memberNames)
+                printWriter.print(s + '\n');
+            printWriter.print('\n');
+
+            // write method names
+            for(String s: methodNames)
+                printWriter.print(s + '\n');
+            printWriter.print('\n');
+
+            // write parameter names
+            for(String s: argNames)
+                printWriter.print(s + '\n');
+            printWriter.print('\n');
+
+            // write local variable names
+            for(String s: varNames)
+                printWriter.print(s + '\n');
+            printWriter.print('\n');
+
+            // write comments in the method
+            for(String s: methodComments)
+                printWriter.print(s + '\n');
+
+            printWriter.close();
+        } catch (IOException exception) {
+            exception.printStackTrace();
+        }
+
     }
 
 }

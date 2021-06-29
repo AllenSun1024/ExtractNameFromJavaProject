@@ -4,7 +4,7 @@ import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 import java.util.List;
 
 /**
- * @class: ArgNameCollector，抽取方法的形参名
+ * @class ArgNameCollector，抽取方法的形参名
  */
 
 public class ArgNameCollector extends VoidVisitorAdapter<List<String>> {
