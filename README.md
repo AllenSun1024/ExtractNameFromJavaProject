@@ -1,16 +1,37 @@
-# ExtractNameFromJavaProject
-Use JavaParser to extract names of Class, Member Variable, Method, Parameters, Variables in method, Comments in method.
+# ExtractNameFromJavaProject💘
 
-ExtractNameFromJavaProject/src/main/java/ArgNameCollector.java: this file shows how to get parameters of some method with JavaParser.
+## Brief💬
 
-ExtractNameFromJavaProject/src/main/java/ClassNameCollector.java: this file shows how to get class names with JavaParser.
+Use **JavaParser** to extract names of the following:
 
-ExtractNameFromJavaProject/src/main/java/CommentCollector.java: this file shows how to get all comments contained in the method with JavaParser.
+- Class
+- Member Variable
+- Method
+- Parameters
+- Variables in method
+- Comments in method
 
-ExtractNameFromJavaProject/src/main/java/ExtractClassName.java: main class, to run the code in your local machine, you may at least need to change variable-"rootPath" in this file which represents "path of the java file repository".
+## User Guide🔎
 
-ExtractNameFromJavaProject/src/main/java/MemberNameCollector.java: this file shows how to get member variables of the class with JavaParser.
+### How to get parameters of a method?
+[ExtractNameFromJavaProject/src/main/java/ArgNameCollector.java](https://github.com/AllenSun1024/ExtractNameFromJavaProject/blob/main/src/main/java/ArgNameCollector.java)
 
-ExtractNameFromJavaProject/src/main/java/MethodNameCollector.java: this file shows how to get method names with JavaParser.
+### How to get names of classes?
+[ExtractNameFromJavaProject/src/main/java/ClassNameCollector.java](https://github.com/AllenSun1024/ExtractNameFromJavaProject/blob/main/src/main/java/ClassNameCollector.java)
 
-ExtractNameFromJavaProject/src/main/java/VarNameCollector.java: this file shows how to get the local variables in the method with JavaParser.
+### How to get all comments of a method?
+[ExtractNameFromJavaProject/src/main/java/CommentCollector.java](https://github.com/AllenSun1024/ExtractNameFromJavaProject/blob/main/src/main/java/CommentCollector.java)
+
+### Where is the main class?
+[ExtractNameFromJavaProject/src/main/java/ExtractClassName.java](https://github.com/AllenSun1024/ExtractNameFromJavaProject/blob/main/src/main/java/ExtractNames.java)
+ 
+`To run the code in your local machine, you may at least need to change variable-"rootPath" in this file which represents "path of the java file repository"`
+
+### How to get member variables of a class?
+[ExtractNameFromJavaProject/src/main/java/MemberNameCollector.java](https://github.com/AllenSun1024/ExtractNameFromJavaProject/blob/main/src/main/java/MemberNameCollector.java)
+
+### How to get names of methods?
+[ExtractNameFromJavaProject/src/main/java/MethodNameCollector.java](https://github.com/AllenSun1024/ExtractNameFromJavaProject/blob/main/src/main/java/MethodNameCollector.java)
+
+### How to get local variables of a method?
+[ExtractNameFromJavaProject/src/main/java/VarNameCollector.java](https://github.com/AllenSun1024/ExtractNameFromJavaProject/blob/main/src/main/java/VarNameCollector.java)
